@@ -6,7 +6,7 @@ import { resolve } from 'path'
 export default defineConfig({
   plugins: [vue()],
     // 静态资源基础路径 base: './' || '',
-    base: process.env.NODE_ENV === 'production' ? './' : '/',
+    base: '/VuePages/',
     resolve:{
       alias: {
         // 配置目录别名
