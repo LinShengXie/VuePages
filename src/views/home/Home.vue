@@ -26,8 +26,12 @@ export default {
 import { reactive } from 'vue'
 import Loading from '../loading/Loading.vue'
 import { NSpace, NRadioGroup, NRadioButton } from 'naive-ui'
+
+// 定义类型
+type Type = 'cube' | 'box' | 'spinner' |'inner'|'billiards'|'clamor'|'music'|'pinball'|'pinwheel'|'switchshop'|'viscid'
+
 const state = reactive({
-  radioVal: 'cube',
+  radioVal: 'cube' as Type,
   typeList: [
     {
       value: 'cube',
