@@ -1,25 +1,28 @@
 <template>
   <div class="l-module-box">
-    <div class="header">    
+    <div class="header">
       <NMenu :value="activeKey" mode="horizontal" :options="menuOptions" responsive />
     </div>
     <div class="containter">
       <div class="containter-left">
-      <ul>
-      <li :class="[activating.label===item.label&&'side-actived']" v-for="item in state.module" :key="item.label" @click="changeTab(item)">
-      {{ item.label }}
-      </li>
-    </ul>
-    </div>
-    <div class="containter-right">
-      <ComponentWindow ref="ComponentWindowDom">
-      <component :is="activating.component"></component>
-      </ComponentWindow>
-    </div>
+        <ul>
+          <li
+            :class="[activating.label === item.label && 'side-actived']"
+            v-for="item in state.module"
+            :key="item.label"
+            @click="changeTab(item)"
+          >
+            {{ item.label }}
+          </li>
+        </ul>
+      </div>
+      <div class="containter-right">
+        <ComponentWindow ref="ComponentWindowDom">
+          <component :is="activating.component"></component>
+        </ComponentWindow>
+      </div>
     </div>
   </div>
-
- 
 </template>
 
 <script lang="ts">
@@ -57,72 +60,64 @@ function renderIcon(icon: Component) {
   return () => h(NIcon, null, { default: () => h(icon) })
 }
 
-let activating = ref(state.module[0] )
+let activating = ref(state.module[0])
 
 const ComponentWindowDom = ref(null)
 
-const checkMoudle = ({ component }) => {
-  activating.value = component
-  ComponentWindowDom.value.open()
-}
-
 const changeTab = (module) => {
-  activating.value=module
-
+  activating.value = module
 }
 
-const {routes} =router.options
+const { routes } = router.options
 
-
-
-const menuOptions: MenuOption[] = routes.reduce((pre,next)=>{
-  if(next.path!=='/'&&!next.children&&next.meta?.type!=='notFound'){
+const menuOptions: MenuOption[] = routes.reduce((pre, next) => {
+  if (next.path !== '/' && !next.children && next.meta?.type !== 'notFound') {
     pre.push({
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            name: next.name
+      label: () =>
+        h(
+          RouterLink,
+          {
+            to: {
+              name: next.name
+            }
+          },
+          () => {
+            return next.name
           }
-        },
-       () => {
-        return  next.name
-       }
-      ),
-    icon: renderIcon(BookIcon)
-  },)
+        ),
+      icon: renderIcon(BookIcon)
+    })
   }
   return pre
-},[]) 
+}, [])
 </script>
 
 <style scoped lang="scss">
 .l-module-box {
-  .header{
+  .header {
     border: 1px solid red;
   }
-  .containter{
+  .containter {
     border: 1px solid blue;
     display: flex;
-    .containter-left{
+    .containter-left {
       width: 20%;
-      ul{
-        li{
+      ul {
+        li {
           padding: 12px;
           border: 1px solid greenyellow;
           margin: 1px;
           background-color: greenyellow;
-          &:hover{
+          &:hover {
             border: 1px solid red;
           }
         }
-        .side-actived{
+        .side-actived {
           border: 1px solid red;
         }
       }
     }
-    .containter-right{
+    .containter-right {
       width: 80%;
     }
   }
