@@ -35,16 +35,16 @@ export default {
   left: 0px;
   right: 0px;
   margin: auto;
-  width: 175px;
-  height: 100px;
+  width: 83px;
+  height: 47.6px;
 }
 .loader span {
   display: block;
   background: #e04960;
-  width: 7px;
+  width: 3px;
   height: 100%;
-  border-radius: 14px;
-  margin-right: 5px;
+  border-radius: 4px;
+  margin-right: 2px;
   float: left;
 }
 .loader span:last-child {

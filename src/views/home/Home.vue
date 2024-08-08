@@ -1,5 +1,4 @@
 <template>
-  <WelCome />
   <MoudlesIndex />
 </template>
 
@@ -11,7 +10,9 @@ export default {
 
 <script setup lang="ts">
 import MoudlesIndex from '../moudles/MoudlesIndex.vue'
-import WelCome from './component/WelCome.vue'
+import { useRoute } from 'vue-router'
+const Route = useRoute()
+console.log(Route.params.teseApi, 'Route')
 </script>
 
 <style scoped></style>

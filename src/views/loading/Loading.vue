@@ -1,15 +1,13 @@
 <template>
   <div class="l-radio-group">
-    <n-space vertical>
-      <n-radio-group v-model:value="state.radioVal" @click.stop>
-        <n-radio-button
-          v-for="type in state.typeList"
-          :key="type.value"
-          :value="type.value"
-          :label="type.label"
-        />
-      </n-radio-group>
-    </n-space>
+    <n-radio-group v-model:value="state.radioVal" @click.stop>
+      <n-radio-button
+        v-for="type in state.typeList"
+        :key="type.value"
+        :value="type.value"
+        :label="type.label"
+      />
+    </n-radio-group>
   </div>
   <div>
     <div class="l-loading-page">
@@ -27,7 +25,7 @@ export default {
 
 <script setup lang="ts">
 import { computed, reactive } from 'vue'
-import { NSpace, NRadioGroup, NRadioButton } from 'naive-ui'
+import { NRadioGroup, NRadioButton } from 'naive-ui'
 import CubeLoading from './type/CubeTem.vue'
 import BoxLoading from './type/BoxTem.vue'
 import SpinnerLoading from './type/SpinnerTem.vue'
@@ -133,7 +131,7 @@ const LoadingComponent = computed(() => {
 
 <style scoped>
 .l-radio-group {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 99;
@@ -143,10 +141,7 @@ const LoadingComponent = computed(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: relative;
+  height: 300px;
 }
 </style>

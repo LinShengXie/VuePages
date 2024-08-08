@@ -21,10 +21,10 @@ export default {
 /* loading.css */
 .spinner {
   position: absolute;
-  width: 128px;
-  height: 128px;
-  top: calc(50% - 64px);
-  left: calc(50% - 64px);
+  width: 83px;
+  height: 83px;
+  top: calc(50% - 41.5px);
+  left: calc(50% - 41.5px);
   transform: perspective(206px) rotateX(45deg);
 }
 
@@ -37,8 +37,8 @@ export default {
 .inner {
   position: absolute;
   border-radius: 50%;
-  width: 64px;
-  height: 64px;
+  width: 41.5px;
+  height: 41.5px;
   animation: spin 1.8s ease-in-out infinite;
 }
 .inner.tl {

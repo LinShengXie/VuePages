@@ -1,32 +1,25 @@
 <template>
-   <div class="boxLoading"></div>
+  <div class="boxLoading"></div>
 </template>
 
-<script  lang="ts">
+<script lang="ts">
 export default {
-   name: 'BoxLoading'
- }
+  name: 'BoxLoading'
+}
 </script>
 
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
 /* loading.css */
-.boxLoading {  
-  width: 50px;
-  height: 50px;
-  margin: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+.boxLoading {
+  width: 166px;
+  height: 166px;
+  position: relative;
 }
 .boxLoading:before {
   content: '';
-  width: 50px;
+  width: 166px;
   height: 5px;
   background: #fff;
   opacity: 0.7;
@@ -34,17 +27,17 @@ export default {
   top: 59px;
   left: 0;
   border-radius: 50%;
-  animation: shadow .5s linear infinite;
+  animation: shadow 0.5s linear infinite;
 }
 .boxLoading:after {
   content: '';
-  width: 50px;
-  height: 50px;
+  width: 83px;
+  height: 83px;
   background: #e04960;
-  animation: animate .5s linear infinite;
+  animation: animate 0.5s linear infinite;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 25%;
+  left: 25%;
   border-radius: 3px;
 }
 @keyframes animate {
@@ -55,7 +48,7 @@ export default {
     transform: translateY(9px) rotate(22.5deg);
   }
   50% {
-    transform: translateY(18px) scale(1, .9) rotate(45deg);
+    transform: translateY(18px) scale(1, 0.9) rotate(45deg);
     border-bottom-right-radius: 40px;
   }
   75% {
@@ -66,13 +59,12 @@ export default {
   }
 }
 @keyframes shadow {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1, 1);
   }
   50% {
     transform: scale(1.2, 1);
   }
 }
-
-
 </style>

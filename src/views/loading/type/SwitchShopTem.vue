@@ -83,9 +83,9 @@ export default {
 .loading {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 83px;
   position: relative;
-  width: 100%;
+  width: 166px;
 }
 .loader__bar {
   display: flex;

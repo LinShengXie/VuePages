@@ -16,8 +16,8 @@ export default {
 /* loading.css */
 .loading {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 83px;
+  height: 83px;
   position: relative;
   border: 4px solid #e04960;
   animation: loader 4s infinite ease;

@@ -1,5 +1,5 @@
 <template>
- <div class="sk-cube-grid">
+  <div class="sk-cube-grid">
     <div class="sk-cube sk-cube-1"></div>
     <div class="sk-cube sk-cube-2"></div>
     <div class="sk-cube sk-cube-3"></div>
@@ -13,20 +13,17 @@
 </template>
 
 <script lang="ts">
- export default {
-   name: 'CubeLoading'
- }
+export default {
+  name: 'CubeLoading'
+}
 </script>
 
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
 .sk-cube-grid {
-  width: 4em;
-  height: 4em;
-  margin: auto; 
+  width: 83px;
+  height: 83px;
 }
 .sk-cube {
   width: 33%;
@@ -63,11 +60,13 @@
   animation-delay: 0.2s;
 }
 @keyframes sk-cube-grid-scale-delay {
-  0%, 70%, 100% {
-    transform: scale3D(1,1,1);
+  0%,
+  70%,
+  100% {
+    transform: scale3D(1, 1, 1);
   }
-  35%           {
-    transform: scale3D(0,0,1);
+  35% {
+    transform: scale3D(0, 0, 1);
   }
 }
 </style>

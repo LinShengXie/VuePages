@@ -29,7 +29,6 @@
       "views/*": ["./src/views/*"],
       "utils/*": ["./src/utils/*"]
     }
-    
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "include": ["src/**/*", "src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
