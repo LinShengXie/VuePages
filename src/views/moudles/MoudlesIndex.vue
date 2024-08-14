@@ -41,10 +41,15 @@ import { h, reactive, ref, shallowRef } from 'vue'
 import { RouterLink } from 'vue-router'
 import Loading from '../loading/Loading.vue'
 import Question from '../question/Question.vue'
+import Blog from '../blog/Blog.vue'
 const activeKey = ref(null)
 
 const state = reactive({
   module: [
+    {
+      label: 'BLOG',
+      component: shallowRef(Blog)
+    },
     {
       label: '加载动画',
       component: shallowRef(Loading)
@@ -95,25 +100,24 @@ const menuOptions: MenuOption[] = routes.reduce((pre, next) => {
 <style scoped lang="scss">
 .l-module-box {
   .header {
-    border: 1px solid red;
+    border: 1px solid #fff;
   }
   .containter {
-    border: 1px solid blue;
     display: flex;
     .containter-left {
       width: 20%;
       ul {
         li {
+          cursor: pointer;
           padding: 12px;
-          border: 1px solid greenyellow;
+          border: 1px solid #fff;
           margin: 1px;
-          background-color: greenyellow;
           &:hover {
-            border: 1px solid red;
+            background: #f1e1c7;
           }
         }
         .side-actived {
-          border: 1px solid red;
+          background: #f1e1c7;
         }
       }
     }

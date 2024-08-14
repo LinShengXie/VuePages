@@ -3,9 +3,7 @@
     <!-- <div class="l-header">
       <NButton @click="close">Close</NButton>
     </div> -->
-    <slot>
-      暂无展示内容
-    </slot>
+    <slot> 暂无展示内容 </slot>
   </div>
 </template>
 
@@ -16,7 +14,7 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from 'vue'
 const state = ref(false)
 
 const open = () => {
@@ -40,8 +38,8 @@ defineExpose({
 .centered-layer {
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 1);
-  border: 5px solid #ccc;
+  background-color: #f4f3ec;
+  border: 5px solid #f4f3ec;
   box-sizing: border-box;
   animation: fadeInScale 2s ease-in-out forwards;
 }
