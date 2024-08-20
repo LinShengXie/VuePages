@@ -1,5 +1,6 @@
 <template>
   <div class="l-welcome">
+    <AudioPlayer />
     <div class="l-text">WelCome to My Blog !</div>
     <div class="l-cube-box">
       <div class="l-cube" v-for="i in state.year?.split('')" :key="i">{{ i }}</div>
@@ -21,9 +22,11 @@ export default {
 </script>
 
 <script setup lang="ts">
+import AudioPlayer from '@/components/AudioPlayer.vue'
 import router from '@/router'
 import { NButton } from 'naive-ui'
 import { onMounted, onUnmounted, reactive } from 'vue'
+
 const formatNumber = (num: number): string => num.toString().padStart(2, '0')
 
 const setTime = () => {

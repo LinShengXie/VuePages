@@ -1,6 +1,6 @@
 <template>
   <div>问题模块</div>
-  <v-md-preview :text="testText"></v-md-preview>
+  <v-md-preview :text="换肤功能实现逻辑"></v-md-preview>
   <NModal v-model:show="state.showModal"></NModal>
 </template>
 
@@ -15,7 +15,7 @@ import { reactive, shallowRef } from 'vue'
 import RecursiveCom from './component/RecursiveCom.vue'
 import { NModal } from 'naive-ui'
 
-import testText from '@/doc/test.md?raw'
+import 换肤功能实现逻辑 from '@/doc/换肤功能实现逻辑.md?raw'
 
 const state = reactive({
   questionList: [

@@ -28,23 +28,23 @@ export default {
 
 <script setup lang="ts">
 import { reactive } from 'vue'
-import testText from '@/doc/test.md?raw'
-import 第一篇博客 from '@/doc/第一篇博客.md?raw'
-import 第二篇博客 from '@/doc/第二篇博客.md?raw'
+import 换肤功能实现逻辑 from '@/doc/换肤功能实现逻辑.md?raw'
+import 搭建vue3体验流程 from '@/doc/搭建vue3体验流程.md?raw'
+import 如何实现echarts柱状图多柱虚线图层问题 from '@/doc/如何实现echarts柱状图多柱虚线图层问题.md?raw'
 const state = reactive({
   mdVM: null,
   mdList: [
     {
-      title: 'test',
-      mdText: testText
+      title: '搭建vue3体验流程',
+      mdText: 搭建vue3体验流程
     },
     {
-      title: '第一篇博客',
-      mdText: 第一篇博客
+      title: '换肤功能实现逻辑',
+      mdText: 换肤功能实现逻辑
     },
     {
-      title: '第二篇博客',
-      mdText: 第二篇博客
+      title: '如何实现echarts柱状图多柱虚线图层问题',
+      mdText: 如何实现echarts柱状图多柱虚线图层问题
     }
   ]
 })
