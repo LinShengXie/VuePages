@@ -30,7 +30,7 @@ export default {
 
 <script setup lang="ts">
 import { NIcon } from 'naive-ui'
-import { computed, reactive, ref } from 'vue'
+import { reactive, ref } from 'vue'
 const props = defineProps({
   position: {
     type: String,
