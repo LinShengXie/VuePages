@@ -24,7 +24,7 @@
     "@vue/eslint-config-typescript": "^13.0.0",
     "@vue/tsconfig": "^0.5.1",
     "eslint": "^8.57.0",
-    "eslint-plugin-vue": "^9.27.0",
+    "eslint-plugin-vue": "^9.29.0",
     "naive-ui": "^2.38.2",
     "prettier": "^3.3.2",
     "typescript": "^5.2.2",
